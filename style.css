@@ -1,10 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* assim a medida vai vir da borda */
+  box-sizing: border-box;
 }
 
-/* criando variaveis para se utilizar no CSS */
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
@@ -26,23 +25,9 @@
 }
 
 body {
-  /*
-    background: url(./assets/assets/bg-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    */
-
-  /* background: color imagem repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
 }
 
-/* 
-    - seletor universal todos os elementos dentro do body irão usar;
-    - display none é Uma propriedade CSS que oculta um elemento da página;
-    - margin e o padding: é O margin é o espaço entre um elemento e seus vizinhos, enquanto o padding é o espaço entre o conteúdo do elemento e sua borda;
-    - forma de centralizar um elemento é a propriedade margin: auto
-*/
 body * {
   font-family: "Quicksand", sans-serif;
   color: var(--text-color);
@@ -50,7 +35,7 @@ body * {
 
 #container {
   width: 360px;
-  margin: 56px auto 0px; /* ou padding-top */
+  margin: 56px auto 0px;
   padding: 0 24px;
 }
 
@@ -60,15 +45,13 @@ body * {
   padding: 24px;
 }
 
-/* img é um elemento inline */
 #profile img {
   width: 112px;
 }
 
 #profile p {
-  /* margin: 8px auto 3px auto; 8px em cima, auto nas lateral direita, 0px embaixo, auto na lateral esquerda*/
   font-weight: 500;
-  line-height: 24px; /* altura da linha */
+  line-height: 24px;
   margin-top: 8px;
 }
 
@@ -86,7 +69,7 @@ body * {
   border: 0;
   border-radius: 50%;
 
-  position: absolute; /* libera as propriedades z-index, top, left */
+  position: absolute;
   top: 50%;
   left: 0;
   z-index: 1;
@@ -114,40 +97,36 @@ body * {
 ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /**/
-  gap: 16px; /* o gap vai colocar espaço entre os elementos */
+  flex-direction: column; 
+  gap: 16px;
   padding: 24px 0;
 }
 
-/* O display: flex deixa os elementos dentro da caixa um a lado do outro */
 ul li a {
   background: var(--surface-color);
   padding: 16px 24px;
   display: flex;
-  justify-content: center; /* coloca o conteudo como centro. align-items também deixa no meio, mas o left continua 0 */
+  justify-content: center;
   align-items: center;
   border: 1px solid var(--stroke-color);
-  /* RGBA: red, green, blue, alfa(transparencia) */
-  border-radius: 8px; /* arredondamento de borda */
-  /* https://caniuse.com pra saber quais navegadores aceitam essa propriedade */
+  border-radius: 8px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
-  text-decoration: none; /* para tirar a linha de baixo do botão */
+  text-decoration: none;
   font-weight: 500;
   transition: background 0.2s;
 }
 
-/* pseudo-selector aplica as coisas quando passar o mouse em cima*/
 ul li a:hover {
   background-color: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
 #social-links {
-  display: flex; /* colocando display flex pra poder habilitar o gap*/
+  display: flex;
   padding: 24px 0; 
-  font-size: 24px; /* altera o tamanho de todos elementos dentro do social-links */
+  font-size: 24px;
   justify-content: center;
 }
 
